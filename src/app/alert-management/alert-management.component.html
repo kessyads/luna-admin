@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Gerenciamento de Alertas</h2>
+    <button class="btn btn-success mb-3" (click)="addAlert()">Adicionar Novo Alerta</button>
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Título do Alerta</th>
+          <th>Descrição</th>
+          <th>Data de Envio</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alert of alerts; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ alert.title }}</td>
+          <td>{{ alert.description }}</td>
+          <td>{{ alert.sendDate | date }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editAlert(alert)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteAlert(alert)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

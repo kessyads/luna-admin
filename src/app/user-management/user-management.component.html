@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Gerenciamento de Usuários</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.status }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editUser(user)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

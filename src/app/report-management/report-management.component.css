@@ -1,0 +1,59 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #C0DED7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .report-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+  }
+  
+  h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Sorts Mill Goudy', serif;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  button {
+    background-color: #0000005C;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #00000080;
+  }
+  

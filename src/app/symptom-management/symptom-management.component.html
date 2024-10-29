@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Gerenciamento de Sintomas</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome do Sintoma</th>
+          <th>Frequência</th>
+          <th>Última Ocorrência</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let symptom of symptoms; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ symptom.name }}</td>
+          <td>{{ symptom.frequency }}</td>
+          <td>{{ symptom.lastOccurrence | date }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editSymptom(symptom)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteSymptom(symptom)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

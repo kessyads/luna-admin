@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Gerenciamento de Calendário Menstrual</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Início do Ciclo</th>
+          <th>Duração (dias)</th>
+          <th>Próxima Menstruação</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ user.name }}</td>
+          <td>{{ user.cycleStart | date }}</td>
+          <td>{{ user.cycleLength }}</td>
+          <td>{{ getNextCycle(user) | date }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editCycle(user)">Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="add">
+    <h2>Gerenciamento de Treinos</h2>
+    <button class="btn btn-success mb-3" (click)="addWorkout()">Adicionar Novo Treino</button>
+  </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome do Treino</th>
+          <th>Fase do Ciclo</th>
+          <th>Duração (min)</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workout of workouts; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ workout.name }}</td>
+          <td>{{ workout.cyclePhase }}</td>
+          <td>{{ workout.duration }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="editWorkout(workout)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteWorkout(workout)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Relatórios de Desempenho e Sintomas</h2>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div class="report-card">
+          <h3>Total de Sintomas Monitorados</h3>
+          <p>{{ totalSymptoms }} sintomas</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="report-card">
+          <h3>Tempo Total de Treino</h3>
+          <p>{{ totalWorkoutTime }} minutos</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="generateReport()">Gerar Relatório Detalhado</button>
+      </div>
+    </div>
+  </div>
+  
